@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qls-boy.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-12-20T08:49:33.395Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://qls-boy.github.io/tags/index.html</loc>
     
     <lastmod>2017-12-20T08:41:38.369Z</lastmod>
