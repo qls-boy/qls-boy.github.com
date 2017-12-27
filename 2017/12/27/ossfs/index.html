@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Qls-Boy">
 <meta property="og:description" content="简介OSSFS可以在Linux系统中将Aliyun OSS bucket挂载到本地文件系统中进行数据交互。根据官网信息目前只有Linux/CentOS/Ubuntu类操作系统的安装包。 功能OSSFS 基于 s3fs 构建，具有 s3fs 的全部功能，主要功能包括：1.支持POSIX 文件系统的大部分功能，包括文件读写，目录，链接操作，权限，uid/gid，以及扩展属性（extended attr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-27T10:25:44.133Z">
+<meta property="og:updated_time" content="2017-12-27T10:26:45.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里OSSFS工具实现OSS Bucket数据共享">
 <meta name="twitter:description" content="简介OSSFS可以在Linux系统中将Aliyun OSS bucket挂载到本地文件系统中进行数据交互。根据官网信息目前只有Linux/CentOS/Ubuntu类操作系统的安装包。 功能OSSFS 基于 s3fs 构建，具有 s3fs 的全部功能，主要功能包括：1.支持POSIX 文件系统的大部分功能，包括文件读写，目录，链接操作，权限，uid/gid，以及扩展属性（extended attr">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T18:25:44+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T18:26:45+08:00">
                 2017-12-27
               </time>
             
@@ -379,7 +379,7 @@
 <h3 id="4-设置开机自挂载"><a href="#4-设置开机自挂载" class="headerlink" title="4. 设置开机自挂载"></a>4. 设置开机自挂载</h3><p>方式1：修改 fstab<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/fstab</span><br><span class="line">ossfs<span class="comment">#your_bucket_name your_mount_point fuse _netdev,url=your_url,allow_other 0 0 </span></span><br><span class="line">$ mount -a <span class="comment">#确保fstab配置正常</span></span><br></pre></td></tr></table></figure></p>
 <p>若开机重启后发现无法自动挂载，需要将netfs服务设置开机自启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chkconfig netfs on</span><br></pre></td></tr></table></figure></p>
 <p>方式2：命令自启<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"/usr/local/bin/ossfs my-bucket my-mount-point -ourl=my-oss-endpoint"</span> &gt;&gt; /etc/rc.local</span><br></pre></td></tr></table></figure></p>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><p>OSSFS工具极大方便了不同服务器间数据交互以及共享，提升了数据实时性。</p>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><p>OSS存储桶结合OSSFS工具极大方便了不同服务器间数据交互以及共享，提升了数据实时性。</p>
 <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p>阿里官网OSSFS工具：<a href="https://help.aliyun.com/document_detail/32196.html?spm=5176.doc50452.6.1052.r0tzpq" target="_blank" rel="noopener">ossfs</a><br>阿里官网OSSFS工具FAQ：<a href="https://help.aliyun.com/document_detail/32197.html?spm=5176.11065259.1996646101.searchclickresult.6ed76232bnkxN2" target="_blank" rel="noopener">ossfs-FAQ</a></p>
 
       
@@ -550,12 +550,6 @@
                   <a href="https://github.com/qls-boy/qls-boy.github.io" target="_blank" title="GitHub">
                     
                       <i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:qiliushuai_bj@163.com" target="_blank" title="E-Mail">
-                    
-                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
